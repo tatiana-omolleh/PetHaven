@@ -257,9 +257,9 @@ fun PetInfo(
                 modifier = Modifier
                     .padding(16.dp)
             ) {
-                if (pet.name == "Fluffy") {
+                if (pet.name == "Bosco") {
                     Image(
-                        painter = painterResource(id = R.drawable.pet_icon_1),
+                        painter = painterResource(id = R.drawable.ic_german_shepherd),
                         contentDescription = "Pet Cover Photo",
                         modifier = Modifier
                             .size(98.dp)

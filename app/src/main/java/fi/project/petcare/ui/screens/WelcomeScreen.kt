@@ -114,7 +114,7 @@ fun WelcomeScreen(
                     modifier = Modifier
                         .background(brush)
                         .paint(
-                            painterResource(id = R.drawable.ic_cat_welcome)
+                            painterResource(id = R.drawable.ic_cat_home)
                         )
                 ) {
                     SnackbarHost(
