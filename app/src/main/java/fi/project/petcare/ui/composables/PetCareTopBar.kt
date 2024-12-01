@@ -30,7 +30,7 @@ fun PetCareTopBar(
         ),
         title = {
             Text(
-                text = "PetCare",
+                text = "PetHaven",
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )

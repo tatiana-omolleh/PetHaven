@@ -45,7 +45,7 @@ data class SettingOption(
 
 val settingsList = listOf(
     SettingOption(
-        title = "Account", subtitle = "Username, Email, Password, Security, Sign out", icon = Icons.Outlined.AccountCircle, subOptions = listOf(
+        title = "Account", subtitle = "Username, Email, Sign out", icon = Icons.Outlined.AccountCircle, subOptions = listOf(
             SettingOption(title = "Sign out", icon = Icons.AutoMirrored.Outlined.ArrowBack, onClick = { })
         )
     ),
@@ -55,14 +55,13 @@ val settingsList = listOf(
         )
     ),
     SettingOption(
-        title = "Language", subtitle = "English, Finnish, Swedish", icon = Icons.Outlined.Language, subOptions = listOf(
+        title = "Language", subtitle = "English, Kiswahili", icon = Icons.Outlined.Language, subOptions = listOf(
             SettingOption(title = "English", subtitle = "Selected"),
         )
     ),
     SettingOption(
         title = "About", subtitle = "Feedback, Report a bug, Version, Licenses", icon = Icons.AutoMirrored.Outlined.HelpOutline, subOptions = listOf(
-            SettingOption(title = "Version", subtitle = "0.1.0"),
-            SettingOption("Licenses", subtitle = "Apache 2.0")
+            SettingOption(title = "Version", subtitle = "0.1.0")
         )
     )
 )

@@ -13,6 +13,6 @@ data class User(
 
 val demoUser: User = User(
     id = "123e4567-e89b-12d3-a456-426614174000",
-    name = "John Demo",
-    email = "john@demo.com"
+    name = "Said Seyyid",
+    email = "said@trial.com"
 )

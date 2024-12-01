@@ -130,14 +130,14 @@ fun PetListScreen(
             }
             is PetUiState.Error -> {
                 val pet = PetResponse.Pet(
-                    name = "Fluffy",
+                    name = "Bosco",
                     species = "Dog",
-                    breed = "Golden Retriever",
-                    ageMonths = 10,
-                    microchipId = 123456789,
+                    breed = "German Sherpherd",
+                    ageMonths = 11,
+                    microchipId = 912345678,
                     ownerId = "123fd-789dsf465-4fd6s",
-                    notes = "Fluffy is a very friendly dog. He loves to play fetch and go for walks.",
-                    weight = 15.0,
+                    notes = "Bosco is a very loyal dog. Loves to play with children and is very friendly",
+                    weight = 18.0,
                     gender = "Male",
                 )
                 Column (

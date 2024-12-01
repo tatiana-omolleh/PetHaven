@@ -44,32 +44,32 @@ class Veterinarian(
 
 val veterinarianList = listOf(
     Veterinarian(
-        name = "Dr. Jane Johnson",
-        location = "Vantaa",
+        name = "Dr. Aramco Kamau",
+        location = "Loresho",
         rating = 4.6f,
         imageUrl = "https://www.example.com/image.jpg"
     ),
     Veterinarian(
-        name = "Dr. John Brown",
-        location = "Helsinki",
+        name = "Dr. Brown Tesco",
+        location = "Madaraka",
         rating = 4.7f,
         imageUrl = "https://www.example.com/image.jpg"
     ),
     Veterinarian(
-        name = "Dr. Jane Brown",
-        location = "Espoo",
+        name = "Dr. Yoram Ali",
+        location = "CBD",
         rating = 4.1f,
         imageUrl = "https://www.example.com/image.jpg"
     ),
     Veterinarian(
-        name = "Dr. John White",
-        location = "Vantaa",
+        name = "Dr. Tito Swalehe",
+        location = "Nairobi West",
         rating = 4.4f,
         imageUrl = "https://www.example.com/image.jpg"
     ),
     Veterinarian(
-        name = "Dr. Jane White",
-        location = "Helsinki",
+        name = "Dr. Jane Tsuma",
+        location = "Langata",
         rating = 4.9f,
         imageUrl = "https://www.example.com/image.jpg"
     ),
@@ -85,31 +85,31 @@ class HairSalon(
 val hairSalonList = listOf(
     HairSalon(
         name = "Hair Salon 1",
-        location = "Vantaa",
+        location = "Kasarani",
         rating = 4.6f,
         imageUrl = "https://www.example.com/image.jpg"
     ),
     HairSalon(
         name = "Hair Salon 2",
-        location = "Helsinki",
+        location = "Lavington",
         rating = 4.7f,
         imageUrl = "https://www.example.com/image.jpg"
     ),
     HairSalon(
         name = "Hair Salon 3",
-        location = "Espoo",
+        location = "Makadara",
         rating = 4.1f,
         imageUrl = "https://www.example.com/image.jpg"
     ),
     HairSalon(
         name = "Hair Salon 4",
-        location = "Vantaa",
+        location = "Chiromo",
         rating = 4.4f,
         imageUrl = "https://www.example.com/image.jpg"
     ),
     HairSalon(
         name = "Hair Salon 5",
-        location = "Helsinki",
+        location = "Madaraka",
         rating = 4.9f,
         imageUrl = "https://www.example.com/image.jpg"
     ),

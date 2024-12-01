@@ -97,12 +97,12 @@ fun WelcomeScreen(
                     verticalArrangement = Arrangement.spacedBy(24.dp)
                 ) {
                     Text(
-                        text = "Welcome to PetCare",
+                        text = "Welcome to PetHaven",
                         style = MaterialTheme.typography.headlineLarge,
                         color = MaterialTheme.colorScheme.primary
                     )
                     Text(
-                        text = "PetCare is here to help you keep track of your pets' health and activities.",
+                        text = "PetHaven is here to ensure your pets have a lovely life. Every pet deserves love, care and a little extra happiness!",
                         style = MaterialTheme.typography.bodyLarge,
                         color = MaterialTheme.colorScheme.secondary,
                         textAlign = TextAlign.Center,
@@ -143,7 +143,7 @@ fun WelcomeScreen(
                                 .weight(1f)
                                 .height(58.dp)
                         ) {
-                            Text(text = "Join PetCare")
+                            Text(text = "Join PetHaven")
                         }
                     }
                     Row (
