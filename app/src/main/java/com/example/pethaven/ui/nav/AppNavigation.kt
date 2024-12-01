@@ -8,7 +8,6 @@ import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -26,6 +25,14 @@ import com.example.pethaven.ui.screens.SettingsScreen
 import com.example.pethaven.viewmodel.AuthUiState
 import com.example.pethaven.viewmodel.AuthViewModel
 import com.example.pethaven.viewmodel.PetViewModel
+import androidx.compose.foundation.layout.* // For Column, Row, Spacer, Modifier, etc.
+import androidx.compose.material3.* // For Material3 components like Card, Text, LinearProgressIndicator
+import androidx.compose.runtime.Composable // For @Composable annotation
+import androidx.compose.ui.Modifier // For Modifier class
+import androidx.compose.ui.unit.dp // For dp values
+import androidx.compose.foundation.lazy.LazyColumn // For LazyColumn
+import androidx.compose.foundation.lazy.items // For LazyColumn items
+
 
 @Composable
 fun NavGraph(
@@ -79,11 +86,89 @@ fun NavGraph(
                 onNavigateToSettings = { navController.navigate(Screen.Settings.route) },
                 navController = navController
             ) {
-                Text(
-                    text = "Community content"
-                )
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(16.dp)
+                ) {
+                    // Section 1: Community Feed
+                    Text(
+                        text = "🐾 Community Feed",
+                        style = MaterialTheme.typography.titleMedium,
+                        modifier = Modifier.padding(bottom = 8.dp)
+                    )
+                    LazyColumn {
+                        items(5) { index ->
+                            Card(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(vertical = 8.dp),
+                                elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
+                            ) {
+                                Column(
+                                    modifier = Modifier.padding(16.dp)
+                                ) {
+                                    Text(
+                                        text = "Pet Story ${index + 1}",
+                                        style = MaterialTheme.typography.titleSmall,
+                                        color = MaterialTheme.colorScheme.primary
+                                    )
+                                    Spacer(modifier = Modifier.height(4.dp))
+                                    Text(
+                                        text = "This is an inspiring story about a pet's journey...",
+                                        style = MaterialTheme.typography.bodyMedium
+                                    )
+                                }
+                            }
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(16.dp))
+
+                    // Section 2: Pet Tips
+                    Text(
+                        text = "📋 Quick Pet Care Tips",
+                        style = MaterialTheme.typography.titleMedium,
+                        modifier = Modifier.padding(bottom = 8.dp)
+                    )
+                    Text(
+                        text = "• Regular grooming keeps your pet healthy and happy.\n" +
+                                "• Ensure your pet's vaccinations are up-to-date.\n" +
+                                "• Provide a balanced diet suitable for your pet's age and breed.",
+                        style = MaterialTheme.typography.bodyMedium
+                    )
+
+                    Spacer(modifier = Modifier.height(16.dp))
+
+                    // Section 3: Fun Poll
+                    Text(
+                        text = "📊 Fun Poll: Favorite Pet Toy",
+                        style = MaterialTheme.typography.titleMedium,
+                        modifier = Modifier.padding(bottom = 8.dp)
+                    )
+                    Column {
+                        Text("🐕 Ball (40%)", style = MaterialTheme.typography.bodyMedium)
+                        LinearProgressIndicator(
+                            progress = { 0.4f },
+                            modifier = Modifier.fillMaxWidth()
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Text("🐈 Feather Wand (35%)", style = MaterialTheme.typography.bodyMedium)
+                        LinearProgressIndicator(
+                            progress = { 0.35f },
+                            modifier = Modifier.fillMaxWidth()
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Text("🐇 Chew Toy (25%)", style = MaterialTheme.typography.bodyMedium)
+                        LinearProgressIndicator(
+                            progress = { 0.25f },
+                            modifier = Modifier.fillMaxWidth()
+                        )
+                    }
+                }
             }
         }
+
         composable(
             Screen.Settings.route,
             enterTransition = {

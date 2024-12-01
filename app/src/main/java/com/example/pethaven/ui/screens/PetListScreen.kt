@@ -372,35 +372,35 @@ fun PetInfo(
                     )
                 }
             }
-        }
-    }
-    pet.healthRecord?.let { healthRecord ->
-        Card(
-            modifier = Modifier.fillMaxWidth(),
-            shape = MaterialTheme.shapes.extraSmall
-        ) {
-            Column(
-                verticalArrangement = Arrangement.spacedBy(8.dp),
-                modifier = Modifier.padding(16.dp)
+        pet.healthRecord?.let { healthRecord ->
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                shape = MaterialTheme.shapes.extraSmall
             ) {
-                Text(
-                    text = "Health Record",
-                    style = MaterialTheme.typography.titleMedium,
-                    color = MaterialTheme.colorScheme.primary
-                )
-                Text(
-                    text = "Last Vaccination: ${healthRecord.lastVaccination}",
-                    style = MaterialTheme.typography.bodyLarge
-                )
-                Text(
-                    text = "Illnesses: ${healthRecord.illnesses.joinToString()}",
-                    style = MaterialTheme.typography.bodyLarge
-                )
-                Text(
-                    text = "Medications: ${healthRecord.medications.joinToString()}",
-                    style = MaterialTheme.typography.bodyLarge
-                )
+                Column(
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                    modifier = Modifier.padding(16.dp)
+                ) {
+                    Text(
+                        text = "Health Record",
+                        style = MaterialTheme.typography.titleMedium,
+                        color = MaterialTheme.colorScheme.primary
+                    )
+                    Text(
+                        text = "Last Vaccination: ${healthRecord.lastVaccination}",
+                        style = MaterialTheme.typography.bodyLarge
+                    )
+                    Text(
+                        text = "Illnesses: ${healthRecord.illnesses.joinToString()}",
+                        style = MaterialTheme.typography.bodyLarge
+                    )
+                    Text(
+                        text = "Medications: ${healthRecord.medications.joinToString()}",
+                        style = MaterialTheme.typography.bodyLarge
+                    )
+                }
             }
         }
     }
 }
+    }
