@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "fi.project.petcare"
+    namespace = "com.example.pethaven"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "fi.project.petcare"
+        applicationId = "com.example.pethaven"
         minSdk = 33
         targetSdk = 34
         versionCode = 1
